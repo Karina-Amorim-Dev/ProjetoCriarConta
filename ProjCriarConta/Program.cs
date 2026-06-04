@@ -11,7 +11,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/Usuario/AcessoNegado";
     });
 
+//INJEÇÃO DE DEPENDENCIAS
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
 
 builder.Services.AddControllersWithViews();
